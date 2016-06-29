@@ -1,0 +1,8 @@
+#ignore Webstorm .idea
+/.idea
+/.DS_Store
+/node_modules
+/test
+/tests
+/arc
+/bower_components
