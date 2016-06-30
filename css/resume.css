@@ -4,6 +4,7 @@
 body {
     background-color: #D0C9B9;
     font-family: "Garamond", "Helvetica", "Book Antiqua";
+    margin: 0;
 }
 
 .upper-case {
@@ -33,9 +34,9 @@ body {
 }
 
 .inner {
-    border: double #953b39 5.5px;
+    border: double #953b39 6px;
     border-radius: 10px;
-    margin-top: 3.0vmax;
+    margin-top: 2.0vmax;
     padding: 2.5vh 0 2.5vh 2.5vh;
     z-index: 10;
     font-size: 1.5vw;
@@ -89,7 +90,7 @@ body {
 }
 
 #intro td {
-    height: 50px;
+    height: 40px;
 }
 
 
@@ -107,7 +108,7 @@ body {
 /* ===> Profile <=== */
 
 #profile-inner p {
-    width: 9vmax;
+    width: 25vmax;
 }
 
 
@@ -131,6 +132,7 @@ body {
 /* ===> For Printing <=== */
 
 @media print {
+
     .section-title {
         background-color: white !important;
     }
@@ -139,6 +141,28 @@ body {
         content: none !important;
     }
 
+    .pagebreak { page-break-before: always; }
+
+    #intro td {
+        height: 20px;
+    }
+
+    .real-content {
+        font-size: 1.8vw;
+    }
+
+    .project-category {
+        font-size: medium;
+    }
+
+}
+
+@page
+{
+    size: auto;   /* auto is the initial value */
+
+    /* this affects the margin in the printer settings */
+    margin: 5mm 5mm 5mm 5mm;
 }
 
 
